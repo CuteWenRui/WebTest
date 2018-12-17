@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>CSS选择器</title>
+		<!--CSS使用方式：链接式，内嵌式，行类样式。-->
+		<!--选择器分为标记选择器，类别选择器，id选择器-->
+		<!--链接式-->
+		<link rel="stylesheet" href="css/css.css" type="text/css" />
+		<!--内嵌式CSS-->
+		<style>
+			/*标记选择器*/
+			a{
+				font-size: 29px;
+				color: red;
+			}
+			/*类别选择器*/
+			.one{
+				font-size: 24px;
+				color: green;
+			}
+			.two{
+				font-size: 16px;
+				color: aqua;
+			}
+			.three{
+				font-size: 12px;
+				color: blueviolet;
+			}
+			/*id选择器*/
+			#first{
+				font-size: 24px;
+			}
+			#second{
+				font-size: 16px;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>CSS选择器</h1>
+		<h3>学习之旅</h3>
+		<a href="www.baidu.com">百度</a>
+		<h2 class="one">必应</h2>
+		<h2 class="two">谷歌</h2>
+		<h2 class="three">搜狗</h2>
+		<h2 id="first">搜狐</h2>
+		<h2 id="second">360</h2>
+		<!--行内样式-->
+		<h2 style="color: red;font-size: 26px;">在页面中包含CSS</h2>
+	</body>
+</html>
