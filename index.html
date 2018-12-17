@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+	</head>
+	<!--b标签近似于strong标签，
+	br转行
+	h2二级标题
+	p段落标签
+	center页面内容居中标签
+	ul无序列表
+	ol有序列表
+	table表格标记,caption标题标记,th表头标记,tr行标记,td单元格标记-->
+	<body>
+		<center>
+			<b>黄鹤楼送孟浩然之广陵</b>
+			<br />
+			古人西辞黄鹤楼，烟花三月下扬州。<br />
+			孤帆远影碧空尽，唯见长江天际流
+			<br />
+			<h1>Java开发的三个方向</h1>
+			<h2>JavaSE</h2>
+			<p>主要用于桌面程序的开发。它是学习Java EE 和 Java ME的基础，也是这本书的重点内容</p>
+			<h2>Java EE</h2>
+			<p>主要用于网页程序的开发。随着互联网的发展，越来越多的企业使用Java语言来开发自己的官方网站，其实不乏世界500强企业</p>
+			<h2>Java ME</h2>
+			<p>主要用于嵌入式系统程序的开发</p>
+		</center>
+		<p>编程词典有以下几种品种：</p>
+		<br />
+		无序列表
+		<ul>
+			<li>Java编程词典</li>
+			<li>VB编程词典</li>
+			<li>VC编程词典</li>
+			<li>.net编程词典</li>
+			<li>C#编程词典</li>
+		</ul>
+		无序列表
+		<ol>
+			<li>Java编程词典</li>
+			<li>VB编程词典</li>
+			<li>VC编程词典</li>
+			<li>.net编程词典</li>
+			<li>C#编程词典</li>
+		</ol>
+		<table width="318" height="167" border="1" align="center">
+			<caption>学生考试成绩单</caption>
+			<tr>
+				<th>姓名</th>
+				<th>语文</th>
+				<th>数学</th>
+				<th>英语</th>
+			</tr>
+			
+			<tr>
+				<!--align设置表格对齐方式-->
+				<!--valign垂直位置-->
+				<!--colspan列占据-->
+				<!--rowspan行占据-->
+				<td align="center" valign="middle">张三</td>
+				<td align="center" valign="middle">89</td>
+				<td align="center" valign="middle">98</td>
+				<td align="center" valign="middle">89</td>
+			</tr>
+		</table>
+		<br />
+		<table width="318" height="167" border="1" align="center">
+			<caption>我的个人信息</caption>
+			<tr>
+				<td align="center" valign="middle" colspan="2">姓名：&ensp;&ensp;郭小睿</td>
+				<td align="center" valign="middle" colspan="2">性别：&ensp;&ensp;男</td>
+			</tr>
+			
+			<tr>
+				<!--align设置表格对齐方式-->
+				<!--valign垂直位置-->
+				<td align="center" valign="middle" colspan="2">国籍：中国</td>
+				<td align="center" valign="middle" colspan="2">民族：汉族</td>
+			</tr>
+			<tr>
+				<!--align设置表格对齐方式-->
+				<!--valign垂直位置-->
+				<td align="left" valign="middle" colspan="2">&ensp;&ensp;手机号：123456789</td>
+				<td align="center" valign="middle" colspan="2" rowspan="2">爱好：做程序</td>
+				
+			</tr>
+			<tr>
+				<!--align设置表格对齐方式-->
+				<!--valign垂直位置-->
+				<td align="center" valign="middle" colspan="2">年龄：20</td>
+				
+			</tr>
+		</table>
+		<br />
+		<br />
+		<form name="myForm" method="post" action="">
+			用户名：<input name="username" type="text" id="username1" maxlength="20" /><br />
+			密码：<input name="password" type="text" id="password1" size="20" maxlength="20" /><br />
+			<input name="submit" type="submit" value="确认保存" />
+			<input name="reset" type="reset" value="重新填写" id="reset" />
+		</form>
+		<br />
+		<p>下拉列表框</p>
+		<select name="select">
+			<option>数码相机区</option>
+			<option>摄影器材</option>
+			<option>MP3</option>
+			<option>U盘</option>
+		</select>
+		<p>多行列表框（不可多选）</p>
+		<select name="select2" size="2">
+			<option>数码相机区</option>
+			<option>摄影器材</option>
+			<option>MP3</option>
+			<option>U盘</option>
+		</select>
+		<p>多行列表（可多选）</p>
+		<!--在 widows 操作系统下，进行多选时按下Ctrl键同时进行单击，可以选择多个选项。-->
+		<select name="select3" size="3" multiple>
+			<option>数码相机区</option>
+			<option>摄影器材</option>
+			<option>MP3</option>
+			<option>U盘</option>
+		</select>
+		<p>多行文本标记</p>
+		<!--readonly只读-->
+		<!--disable不可使用，显示灰色-->
+		<textarea readonly="readonly" disabled="disabled">
+		</textarea>
+		<br />
+		<!--cols指定列数,
+		rows指定行数,
+		wrap指定是否自动换行。
+		(hard默认值，自动换行，值提交到服务器换行符也会被提交；soft自动换行，换行符不会被提交；off，不换行，只能通过enter换行)-->
+		<textarea cols="20" rows="3">
+		</textarea>
+		<p>超链接与图片标记</p>
+		<a href="www.baidu.com">百度</a>
+		<br />
+		<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png" />
+		<p>演示图片和超链接</p>
+		<table align="center" border="1" height="523" width="413">
+			<tr>
+				<td align="center">
+					<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png" />
+				</td align="center">
+				<td>
+					<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png" />
+				</td>
+			</tr>
+			<tr>
+				<td align="center">百度</td>
+				<td align="center">百度</td>
+			</tr>
+			<tr>
+				<td align="center">
+					<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png" />
+				</td>
+				<td align="center"> 
+					<img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_86d58ae1.png" />
+				</td>
+			</tr>
+			<tr>
+				<td align="center">百度</td>
+				<td align="center">百度</td>
+			</tr>
+		</table>
+		<p>H5新增元素</p>
+		<section>
+			<h2>section标记的使用：常用来表示页面中的一个区域</h2>
+			<p>完成百分比：100%</p>
+			<input type="button" value="请点击" />
+		</section>
+		<p>article标记的使用：常用来表示页面中的一块与上下文不相关的独立内容，如博客文章，评论等等</p>
+		<article>
+			<header>苹果美容</header>
+			<p>苹果真的美容的，俺不骗你~</p>
+			<footer>
+				<p>2018-12-17</p>
+			</footer>
+		</article>		
+	</body>
+</html>
