@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script>
+			//JavaScript中区分大小写,
+			//每条语句结尾可以省略分号,但是最好加上,这样可以保证每行代码的准确性,提高可读性。
+			alert("JS学习之旅");
+			//变量是弱类型的,只能使用var运算符
+			var name = '郭小睿';//字符类型
+			var age = 18;
+			alert('大家好，我是'+name+'~我今年'+18+'岁。');
+			var now = new Date();//获取日期对象
+			alert(now);
+			/*
+			 * 我是多行注释
+			 */
+			//我是单行注释
+			var a =true;//布尔类型
+			var b =1;//数值类型
+			if(b && a){
+			alert("布尔类型只有两个值:true和false。但是可以用0表示false，1表示true");
+			}
+			/*
+			 * 空值：用于定义空的或者不存在的引用。
+			 * 未定义值：当使用了一个并未声明的变量，或者使用了一个已经声明但没有赋值的变量时，将返回未定义值(undefined)。
+			 * 如果只是声明了变量，但是未对其赋值，其默认值会是undefined。
+			 */
+			var c;
+			alert(c);
+			/*
+			 * js中还有一种特殊类型的数字变量NaN——非数字。当程序中由于某种原因发生计算错误后，将产生一个没有意义的数字，就是返回的NaN。
+			 */
+			//同时定义多个变量
+			var d,e,f;
+			//同时定义多个变量并赋值
+			var g=1,h='js';
+			/*
+			 * 变量的作用域：全局变量和局部变量
+			 */
+			var name = '郭小睿同学';//全局变量
+			function send(){
+				var qqMail='87920151@qq.com';//局部变量，仅在send函数中可以使用
+				alert('发送邮件给'+name+'他的邮箱：'+qqMail);
+			}
+		</script>
+	</head>
+	<body>
+	<input type="button" onclick="send()" value="测试全局变量和局部变量"></input>
+	</body>
+</html>
