@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件处理程序的调用与windows对象的方法</title>
+	</head>
+	<body>
+		<input type="button" id="btn_save" value="保存" />
+		<input type="button" id="btn2_save" value="保存" onclick="alert('单击了保存按钮');" />
+		<br />
+		<form id="form" name="form" method="post" action="">
+			<label></label>
+			<table width="353" height="140" border="1">
+				<tr>
+					<td width="104" align="middle">用户名</td>
+					<td width="233" align="left"><label for="textfield"></label>
+						<input type="text" name="textfield" id="textfield" />
+					</td>
+				</tr>
+				<tr>
+					<td width="104" align="middle">密码</td>
+					<td width="233" align="left"><label for="textfield2"></label>
+						<input type="password" name="textfield2" id="textfield2" />
+					</td>
+				</tr>
+				<tr>
+					<td width="104" align="middle">确认密码</td>
+					<td width="233" align="left"><label for="textfield3"></label>
+						<input type="password" name="textfield3" id="textfield3" />
+					</td>
+				</tr>
+			</table>
+		</form>
+	</body>
+	<!--在JS中-->
+	<script language="JavaScript">
+			var b_save = document.getElementById("btn_save");
+			b_save.onclick=function(){
+				alert("单击了保存按钮");
+				//打开一个新的浏览器窗口，在窗口显示index.html文件
+				window.open("index.html","index","width=531,height=402,top=50,left=20");
+			}
+	</script>
+</html>
