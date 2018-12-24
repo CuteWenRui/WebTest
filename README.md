@@ -53,3 +53,11 @@
 > * break与continue语句：break跳出当前一层循环；continue跳出当前一层循环，进行下一次循环。
 
 见js3.html。
+
+# 事件处理程序的调用与windows对象的方法
+
+见js4.html。
+
+# Date对象
+
+见date.html。
