@@ -61,3 +61,7 @@
 # Date对象
 
 见date.html。
+
+# DOM对文档的操作
+
+见Dom.html。

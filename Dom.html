@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>DOM技术之操作文档</title>
+	</head>
+	<body>
+		<table width="100%" border="1"  cellpadding="0" cellspacing="0" bordercolor="#FFFFFF"
+			bordercolorlight="#666666" bordercolordark="#FFFFFF" id="comment">
+			<tr>
+				<td width="18%" height="27" align="center" bgcolor="#E5BB93">评论人</td>
+				<td width="82%" align="center" bgcolor="#E5BB93">评论内容</td>
+			</tr>
+		</table>
+		<form name="form1" method="post" action="">
+			评论人：<input name="person" type="text" id="person" size="40" />
+			评论内容：<textarea name="content" cols="60" rows="6" id="content"></textarea>
+			<input type="Button" name="button" value="发表" onclick="addElement();" />
+			<input type="Reset" name="reset" value="重置" />
+			<input type="Button" name="button" value="删除第二行" onclick="deleteFirstElement();" />
+			<input type="button" name="button" value="删除最后一行" onclick="deleteLastElement();" />
+			
+			
+		</form>
+	</body>
+	<script language="JavaScript">
+		function addElement(){
+			//创建代表评论人和评论内容的TextNode节点
+			var person = document.createTextNode(form1.person.value);
+			var content =document.createTextNode(form1.content.value);
+			//创建td类型的Element节点
+			var td_person=document.createElement("td");
+			var td_content=document.createElement("td");
+			//创建一个tr类型的Element节点
+			var tr = document.createElement("tr");
+			//创建一个tbody类型的Element节点
+			var tbody =document.createElement("tbody");
+			//将TextNode节点加入到td类型的节点中
+			td_person.appendChild(person);
+			td_content.appendChild(content);
+			//将td类型的节点添加到tr节点中
+			tr.appendChild(td_person);
+			tr.appendChild(td_content);
+			//将tr节点添加到tbody中
+			tbody.appendChild(tr);
+			
+			//获取table对象
+			var tComment =document.getElementById("comment");
+			//将节点tbody加入到节点尾部
+			tComment.appendChild(tbody);
+			//清空评论人文本框
+			form1.person.value="";
+			//清空评论内容文本框
+			form1.content.value="";
+		}
+		
+		function deleteFirstElement(){
+			var tComment = document.getElementById("comment");//获取table对象
+			console.log(tComment.rows.length);
+			if(tComment.rows.length>1){
+				tComment.deleteRow(1);//删除表格第二行，即删除第一条评论
+			}
+		}
+		
+		function deleteLastElement(){
+			var tComment = document.getElementById("comment");//获取table对象
+			console.log(tComment.rows.length);
+			if(tComment.rows.length>1){
+				tComment.deleteRow(tComment.rows.length-1);//删除表格最后一行,即最后一条评论
+			}
+		}
+	</script>
+</html>
